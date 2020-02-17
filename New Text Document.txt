@@ -1,0 +1,30 @@
+b1: nén project cần up lên hosting
+b2: giải nén di chuyển tất cả tệp trong thư mục vừa giải nén ra ngoài cùng.
+b3: xóa tệp public_html và tmp / đổi tên public thành public_html.
+b4: zô path "app/Privider/AppServiceProvider"
+	Copy "$this->app->bind('path.public',function(){return base_auth('public_html'); });"
+	paste vào hàm register
+b5: zô path "config/database"
+	copy " 'options' =>  [PDO::ATTR_EMULATE_PREPARES => true], "
+	paste vào trong mysql
+b6: mở file .env & copy key bỏ chữ base64.
+b7: zô past "config/app.php"
+	tìm key sửa key trong  base64_decode
+	'key' => env('APP_KEY')
+    <=> 'key' => env('APP_KEY', base64_decode('6/PWXwi7cjLCJZqnfdHQxLF78TmJUDxofaCBa0kXXGU=')),
+	
+	sửa debug thành true
+b8: zô path bootstrap/cache
+	xóa tất cả  tệp trong cache trừ ( .gitignore )
+b9: tạo cơ sở dữ liệu
+b10: copy & paste DB Name + DB User + DB Host vào .env
+b11: zô path config/database sửa như hệt trong .env
+
+
+tạo doamain
+
+vào clouDNS
+
+mã 01234568
+
+ https://my.freenom.com (tên miền. tk)
