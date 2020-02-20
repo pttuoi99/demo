@@ -1,0 +1,8 @@
+Listen 8001
+<VirtualHost *:8001>
+    DocumentRoot "E:\ThanhTuoi\Project\cham-cong\application\public"
+    <Directory "E:\ThanhTuoi\Project\cham-cong\application\public">
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
