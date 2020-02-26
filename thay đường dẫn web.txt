@@ -6,3 +6,13 @@ Listen 8001
         Require all granted
     </Directory>
 </VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "E:/xampp/htdocs/laravel/public"
+    ServerName laravel.abc
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "E:/xampp/htdocs/vuoncayviet/public"
+    ServerName vuoncayviet.com
+</VirtualHost>
